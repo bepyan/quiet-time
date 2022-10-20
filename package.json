@@ -9,6 +9,7 @@
     "lint": "eslint ./packages --ext .js,.ts,.svelte --cache",
     "common": "yarn workspace @common",
     "react-front": "yarn workspace react-front",
+    "server": "yarn workspace server",
     "dlx-sdk": "yarn dlx @yarnpkg/sdks vscode"
   },
   "devDependencies": {
