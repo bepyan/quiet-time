@@ -13,7 +13,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn react-front install --immutable --immutable-cache
+          yarn react-front install
           yarn react-front build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
