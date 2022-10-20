@@ -21,5 +21,6 @@
     "path": "^0.12.7",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
-  }
+  },
+  "homepage": "https://bepyan.github.io/quiet-time"
 }
