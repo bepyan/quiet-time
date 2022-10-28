@@ -22,3 +22,5 @@ tsconfig.tsbuildinfo
 
 # macOS DSStore
 .DS_Store
+
+.env

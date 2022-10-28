@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['plugin:prettier/recommended'],
-  plugins: ['unused-imports', 'simple-import-sort', '@typescript-eslint'],
+  plugins: ['unused-imports', 'simple-import-sort'],
   rules: {
     // https://github.com/sweepline/eslint-plugin-unused-imports
     'no-unused-vars': 'off',
@@ -18,6 +18,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
+      plugins: ['@typescript-eslint'],
       rules: {
         'simple-import-sort/imports': [
           'error',
@@ -27,7 +28,8 @@ module.exports = {
         ],
       },
       parserOptions: {
-        project: ['./tsconfig.base.json', './packages/**/tsconfig.json'],
+        tsconfigRootDir: __dirname,
+        project: ['./packages/*/tsconfig.json'],
       },
     },
   ],

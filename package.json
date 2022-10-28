@@ -2,15 +2,19 @@
   "name": "quiet-time",
   "packageManager": "yarn@3.2.4",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "lint": "eslint ./packages --ext .js,.ts,.svelte --cache",
-    "common": "yarn workspace @common",
-    "react-front": "yarn workspace react-front",
-    "server": "yarn workspace server",
-    "dlx-sdk": "yarn dlx @yarnpkg/sdks vscode"
+    "common": "yarn workspace @qt/common",
+    "front": "yarn workspace @qt/front",
+    "server": "yarn workspace @qt/server",
+    "test": "yarn workspace @qt/test",
+    "dev": "yarn workspaces foreach -pi run dev",
+    "build": "yarn workspaces foreach -pti run build"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.1",
@@ -19,10 +23,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "eslint-plugin-svelte3": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.7.1",
-    "svelte": "^3.52.0",
     "typescript": "^4.8.4"
   }
 }

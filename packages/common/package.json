@@ -1,8 +1,13 @@
 {
-  "name": "@monorepo/common",
+  "name": "@qt/common",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
-  "author": "bepyan",
-  "license": "ISC"
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }
