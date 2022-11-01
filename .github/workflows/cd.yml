@@ -14,6 +14,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           yarn install
+          yarn front install
           yarn front build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
