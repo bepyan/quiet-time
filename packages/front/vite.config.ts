@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/quiet-time',
   plugins: [react()],
   resolve: {
     alias: {
@@ -11,7 +12,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["@qt/common"],
+    include: ['@qt/common'],
   },
   build: {
     commonjsOptions: {
