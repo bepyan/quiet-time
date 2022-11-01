@@ -18,6 +18,9 @@ jobs:
       !contains( github.event.pull_request.labels.*.name, 'NO-DEPLOY')
 
     steps:
-      - name: test
-        run: |
-          echo test success
+      - uses: actions/checkout@v3
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "quiet-time"
+          heroku_email: "bepyan@naver.com"
