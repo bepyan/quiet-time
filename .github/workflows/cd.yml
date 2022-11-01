@@ -13,10 +13,10 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn react-front install
-          yarn react-front build
+          yarn front install
+          yarn front build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: packages/react-front/dist
+          folder: packages/front/dist
