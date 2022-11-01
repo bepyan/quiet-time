@@ -1,0 +1,23 @@
+name: server CD
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - 'main'
+    paths:
+      - 'packages/common/**'
+      - 'packages/server/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: |
+      github.event.pull_request.merged == true &&
+      !contains( github.event.pull_request.labels.*.name, 'NO-DEPLOY')
+
+    steps:
+      - name: test
+        run: |
+          echo test success
