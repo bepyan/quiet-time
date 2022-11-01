@@ -6,23 +6,11 @@ on:
       - closed
 
 jobs:
-  check-merged:
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
-    steps:
-      - run: |
-          echo The PR was merged
-
-  check-label:
-    runs-on: ubuntu-latest
-    name: TEST
-    if: contains( github.event.pull_request.labels.*.name, 'TEST')
-    steps:
-      - run: |
-          echo The PR had a 'TEST' label
-
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: |
+      github.event.pull_request.merged == true &&
+      contains( github.event.pull_request.labels.*.name, 'TEST')
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
