@@ -32,5 +32,9 @@ module.exports = {
         project: ['./packages/*/tsconfig.json'],
       },
     },
+    {
+      files: ['**/*.js?(x)'],
+      parser: '@babel/eslint-parser',
+    },
   ],
 };
