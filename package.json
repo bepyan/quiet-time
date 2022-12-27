@@ -8,7 +8,8 @@
     "front": "yarn workspace @qt/front",
     "svelte-kit": "yarn workspace @qt/svelte-kit",
     "dev": "yarn workspaces foreach -pi run dev",
-    "build": "yarn workspaces foreach -pti run build"
+    "build": "yarn workspaces foreach -pti run build",
+    "preview": "yarn workspaces foreach -pti run preview"
   },
   "workspaces": [
     "packages/*"
