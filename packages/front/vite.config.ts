@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/quiet-time',
+  base: '/quiet-time/',
   plugins: [react()],
   resolve: {
     alias: {
