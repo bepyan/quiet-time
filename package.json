@@ -6,8 +6,6 @@
     "lint": "eslint ./packages --ext .js,.ts,.svelte --cache",
     "common": "yarn workspace @qt/common",
     "front": "yarn workspace @qt/front",
-    "server": "yarn workspace @qt/server",
-    "test": "yarn workspace @qt/test",
     "dev": "yarn workspaces foreach -pi run dev",
     "build": "yarn workspaces foreach -pti run build"
   },
